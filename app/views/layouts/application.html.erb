@@ -9,7 +9,30 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<section class="hero has-background-black-ter">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-light">
+        <font face="courier">Mahad</font>
+      </h1>
+      <h2 class="subtitle">
+        <a href="/discord" class="label has-text-light">Discord</a>
+      </h2>
+    </div>
+  </div>
+</section>
+
   <body>
     <%= yield %>
   </body>
+  
+<footer class="footer has-background-black-ter">
+  <div class="content has-text-centered">
+    <p>
+      Created by <a href="https://github.com/rokhimin">Rokhimin</a> using Rails | Mahad @2019 <br/>
+	  source code on <a href="https://github.com/rokhimin/Rails-Mahad">Github</a>
+    </p>
+  </div>
+</footer>
+  
 </html>

@@ -1,0 +1,54 @@
+
+
+<div class="hero has-background-black-ter is-fullheight">
+	<div class="hero-body">
+	<div class="container">
+	<div class="box has-background-dark has-text-light">
+	
+		<div class="field has-text-centered">
+		<label class="label has-text-light"><u>Discord Webhook</u></label>
+		</div>
+	
+		<%= form_tag("discord") do %>
+		  <div class="field">
+		  <label class="label has-text-light">URL webhook<font color="red">*</font></label>
+		  <input class="input" type="text" placeholder="https://discordapp.com/api/webhooks/595513961873670144/sgcJcOL8c9Sgkw4f8wAaiwajwPPn"
+		  <%= text_field(:url, :field) %> 
+		  </div>
+		  
+		  <div class="field">
+		  <label class="label has-text-light">Colour (default grey)</label>
+		  <input class="input" type="text" placeholder="red, blue, green"
+		  <%= text_field(:color, :field) %>
+		  </div>
+
+		  <div class="field">
+		  <label class="label has-text-light">Title</label>
+		  <input class="input" type="text" placeholder="title"
+		  <%= text_field(:title, :field) %>
+		  </div>
+		  
+		  <div class="field">
+		  <label class="label has-text-light">Url Title</label>
+		  <input class="input" type="text" placeholder="url title"
+		  <%= text_field(:url_title, :field) %>
+		  </div>
+
+		  <div class="field">
+		  <label class="label has-text-light">Desctiption</label>
+		  <input class="input" type="text" placeholder="description"
+		  <%= text_field(:desc, :field) %>
+		
+		  <br/><br/>
+		  <div class="field has-text-centered">
+		  <button class="button has-background-black-ter has-text-light has-text-centered" 
+		  <%= submit_tag("send") %> Send
+		  </div>
+		  
+		<% end %>
+			
+	</div>
+	</div>
+	</div>
+
+</div>
