@@ -1,4 +1,5 @@
 require 'discordrb/webhooks'
+require 'slack/incoming/webhooks'
 
 class MahadController < ApplicationController
 protect_from_forgery prepend: true
@@ -104,7 +105,10 @@ protect_from_forgery prepend: true
 				end
 				  
 				discord_field_name.each do |x|
-				    embed.add_field(name: "#{x[1]}", value: "#{@sigil_field_value}")
+					unless @sigil_field_value == ''
+				    	embed.add_field(name: "#{x[1]}", value: "#{@sigil_field_value}")
+					else
+					end
 				end
 
 			  end
@@ -127,6 +131,86 @@ protect_from_forgery prepend: true
 	end
 
 
+	# slack webhook initialize
+	def slack
+	end
+
+	# slack webhook sending
+	def send_slack
+		
+		slack_url = params[:url]
+		slack_username = params[:username]
+		slack_color = params[:color]
+		slack_title = params[:title]
+		slack_url_title = params[:url_title]
+		slack_post = params[:post]
+		slack_text = params[:text]
+		slack_image = params[:image]
+		
+		slack_url.each do |x|
+		@slack = Slack::Incoming::Webhooks.new "#{x[1]}"
+		end
+
+		
+		slack_username.each do |x|
+			@sigil2_username = x[1]
+		end
+		slack_color.each do |x|
+					case x[1]
+						when 'white'
+				    		@sigil2_color = "#ffffff"
+						when 'black'
+				    		@sigil2_color = "#000000"
+						when 'red'
+				    		@sigil2_color = "#ff0000"
+						when 'blue'
+				    		@sigil2_color = "#0000ff"
+						when 'green'
+				    		@sigil2_color = "#00cc00"
+						when 'orange'
+				    		@sigil2_color = "#ff8c1a"
+						when 'purple'
+				    		@sigil2_color = "#9900ff"
+						else #grey
+				    		@sigil2_color = "#8c8c8c"
+					end
+		end
+		slack_title.each do |x|
+			@sigil2_title = x[1]
+		end
+		slack_url_title.each do |x|
+			@sigil2_url_title = x[1]
+		end
+		slack_post.each do |x|
+			@sigil2_post = x[1]
+		end
+		slack_text.each do |x|
+			@sigil2_text = x[1]
+		end
+		slack_image.each do |x|
+			@sigil2_image = x[1]
+		end
+		
+		begin
+			
+		attachments = {
+		  color: "#{@sigil2_color}",
+		  title: "#{@sigil2_title}",
+		  title_link: "#{@sigil2_url_title}",
+		  text: "#{@sigil2_text}",
+		  image_url: "#{@sigil2_image}"
+		}
+
+		@slack.username = "Mahad-#{@sigil2_username}"
+		@slack.post "#{@sigil2_post}", attachments: [attachments]
+			
+		rescue NoMethodError
+			render plain: '{"respond":"failed","code":"0",status:"NoMethodError"}'
+		else
+			render plain: '{"respond":"success","code":"1",status:"success sending"}'
+			
+		end
+	end
 
 	
 end
