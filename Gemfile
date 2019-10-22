@@ -54,7 +54,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # css framework for front-end
-gem "font-awesome-rails"
 gem "bulma-rails", "~> 0.7.5"
 
 # Discordrb-webhooks API wrapper 
