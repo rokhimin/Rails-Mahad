@@ -12,32 +12,140 @@
 		<%= form_tag("discord") do %>
 		  <div class="field">
 		  <label class="label has-text-light">URL webhook<font color="red">*</font></label>
-		  <input class="input" type="text" placeholder="https://discordapp.com/api/webhooks/595513961873670144/sgcJcOL8c9Sgkw4f8wAaiwajwPPn"
+		  <input class="input" type="text" placeholder="e.g. https://discordapp.com/api/webhooks/595513961873670144/sgcJcOL8c9Sgkw4f8wAaiwajwPPn"
 		  <%= text_field(:url, :field) %> 
+		  </div>
+		  
+		  <div class="columns">
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Username</label>
+		  <input class="input" type="text" placeholder="e.g. Mahad"
+		  <%= text_field(:username, :field) %>
+		  </div>
+		  </div>
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Avatar url</label>
+		  <input class="input" type="text" placeholder="e.g. https://imgur.com/9388211.jpg"
+		  <%= text_field(:avatar_url, :field) %>
+		  </div>
+		  </div>
+		  
 		  </div>
 		  
 		  <div class="field">
 		  <label class="label has-text-light">Colour (default grey)</label>
-		  <input class="input" type="text" placeholder="red, blue, green"
+		  <input class="input" type="text" placeholder="e.g. red, blue, green"
 		  <%= text_field(:color, :field) %>
 		  </div>
 
+		  <div class="columns">
+		  
+		  <div class="column">
 		  <div class="field">
 		  <label class="label has-text-light">Title</label>
-		  <input class="input" type="text" placeholder="title"
+		  <input class="input" type="text" placeholder="e.g. title"
 		  <%= text_field(:title, :field) %>
 		  </div>
+		  </div>
 		  
+		  <div class="column">
 		  <div class="field">
 		  <label class="label has-text-light">Url Title</label>
-		  <input class="input" type="text" placeholder="url title"
+		  <input class="input" type="text" placeholder="e.g. url title"
 		  <%= text_field(:url_title, :field) %>
+		  </div>
+		  </div>
+		  
 		  </div>
 
 		  <div class="field">
 		  <label class="label has-text-light">Desctiption</label>
-		  <input class="input" type="text" placeholder="description"
+		  <input class="input" type="text" placeholder="e.g. description"
 		  <%= text_field(:desc, :field) %>
+		  
+		  <div class="field">
+		  <label class="label has-text-light">Image</label>
+		  <input class="input" type="text" placeholder="e.g. https://cdn.discordapp.com/embed/avatars/0.png"
+		  <%= text_field(:image, :field) %>
+		  
+		  <div class="field">
+		  <label class="label has-text-light">Thumbnail</label>
+		  <input class="input" type="text" placeholder="e.g. https://cdn.discordapp.com/embed/avatars/0.png"
+		  <%= text_field(:thumbnail, :field) %>
+		 
+		  <div class="columns">
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Author name</label>
+		  <input class="input" type="text" placeholder="e.g. Mahad"
+		  <%= text_field(:author_name, :field) %>
+		  </div>
+		  </div>
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Author url</label>
+		  <input class="input" type="text" placeholder="e.g. https://github.com/rokhimin"
+		  <%= text_field(:author_url, :field) %>
+		  </div>
+		  </div>
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Author icon url</label>
+		  <input class="input" type="text" placeholder="e.g. https://cdn.discordapp.com/embed/avatars/0.png"
+		  <%= text_field(:author_icon_url, :field) %>
+		  </div>
+		  </div>
+		  
+		  </div>
+		  
+		  
+		  <div class="columns">
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Footer</label>
+		  <input class="input" type="text" placeholder="e.g. footer"
+		  <%= text_field(:footer, :field) %>
+		  </div>
+		  </div>
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Icon footer</label>
+		  <input class="input" type="text" placeholder="e.g. https://cdn.discordapp.com/embed/avatars/0.png"
+		  <%= text_field(:icon_footer, :field) %>
+		  </div>
+		  </div>
+		  
+		  </div>
+		  
+		  
+		  <div class="columns">
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Field name</label>
+		  <input class="input" type="text" placeholder="e.g. field name"
+		  <%= text_field(:field_name, :field) %>
+		  </div>
+		  </div>
+		  
+		  <div class="column">
+		  <div class="field">
+		  <label class="label has-text-light">Field value</label>
+		  <input class="input" type="text" placeholder="e.g. field value"
+		  <%= text_field(:field_value, :field) %>
+		  </div>
+		  </div>
+		  
+		  </div>
 		
 		  <br/><br/>
 		  <div class="field has-text-centered">
