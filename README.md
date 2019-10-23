@@ -1,24 +1,20 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Lang](https://img.shields.io/badge/Language-Ruby-red)
+[![Build Status](https://travis-ci.com/rokhimin/Rails-Mahad.svg?branch=master)](https://travis-ci.com/rokhimin/Rails-Mahad)
 
-Things you may want to cover:
+# Mahad
+Mahad is rails app for testing webhooks discord, slack
+> https://mahad.herokuapp.com
 
-* Ruby version
+# Using
 
-* System dependencies
+## get url webhook discord?
+![](https://i.imgur.com/LGQsTHK.png)
 
-* Configuration
+## get url webhook slack?
+> https://api.slack.com/apps
 
-* Database creation
+![](https://i.imgur.com/kndXr31.png)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# License
+MIT License.
