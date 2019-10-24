@@ -9,6 +9,8 @@ Mahad is rails app for testing webhooks discord, slack
 # Using
 
 ## get url webhook discord?
+open discord => your server => server settings => webhooks
+
 ![](https://i.imgur.com/LGQsTHK.png)
 
 ## get url webhook slack?
