@@ -4,7 +4,7 @@
 
 # Mahad
 Mahad is rails app for testing webhooks discord, slack
-> https://mahad.herokuapp.com
+> THIS PROJECT MERGED TO https://github.com/rokhimin/Rails-the-kingdom-of-magic
 
 # Using
 
